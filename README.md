@@ -1,7 +1,6 @@
-<<<<<<< HEAD
 # FeedApp
 app where you can post something for you
-=======
+
 This is a Kotlin Multiplatform project targeting Android, iOS, Desktop.
 
 * `/composeApp` is for code that will be shared across your Compose Multiplatform applications.
@@ -16,4 +15,4 @@ This is a Kotlin Multiplatform project targeting Android, iOS, Desktop.
 
 
 Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…
->>>>>>> 5007516 (init)
+
