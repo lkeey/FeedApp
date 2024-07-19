@@ -1,4 +1,5 @@
 package feature_login.models
 
-class LoginAction {
+sealed class LoginAction {
+    data object OpenMainScreen : LoginAction()
 }
