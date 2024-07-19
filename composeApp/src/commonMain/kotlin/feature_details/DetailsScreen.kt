@@ -1,9 +1,9 @@
-package feature_login
+package feature_details
 
 import androidx.compose.runtime.Composable
 
 @Composable
-fun LoginScreen(
+fun DetailsScreen(
 
 ) {
 

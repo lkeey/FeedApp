@@ -1,9 +1,9 @@
-package feature_login
+package feature_create
 
 import androidx.compose.runtime.Composable
 
 @Composable
-fun LoginScreen(
+fun CreatePostScreen(
 
 ) {
 
