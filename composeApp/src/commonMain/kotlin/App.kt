@@ -1,16 +1,18 @@
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.getValue
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import feature_create.CreatePostScreen
-import feature_feed.FeedScreen
 import feature_login.LoginScreen
 import feature_paywall.PayWallScreen
 import navigation.AppScreens
 import navigation.LocalNavHost
 import navigation.feature_main.MainScreen
+import theme.AppTheme
 
 @Composable
 fun App() = AppTheme {
