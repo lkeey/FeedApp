@@ -1,10 +1,13 @@
-package feature_login
+package features.feature_login
 
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import feature_login.models.LoginAction
+import features.feature_login.models.LoginAction
 import navigation.LocalNavHost
 
 @Composable

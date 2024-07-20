@@ -1,4 +1,4 @@
-package feature_details
+package features.feature_details
 
 import androidx.compose.runtime.Composable
 

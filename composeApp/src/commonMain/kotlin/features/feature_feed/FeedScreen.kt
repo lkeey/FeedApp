@@ -1,9 +1,9 @@
-package feature_create
+package features.feature_feed
 
 import androidx.compose.runtime.Composable
 
 @Composable
-fun CreatePostScreen(
+fun FeedScreen(
 
 ) {
 

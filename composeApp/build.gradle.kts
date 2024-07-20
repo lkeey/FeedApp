@@ -47,6 +47,7 @@ kotlin {
 
             implementation(libs.compose.viewmodel)
             implementation(libs.compose.navigation)
+
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)

@@ -1,4 +1,4 @@
-package navigation.feature_main
+package features.feature_paywall
 
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -6,11 +6,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun MainScreen(
+fun PayWallScreen(
 
 ) {
     Text(
-        "Main Screen",
+        "Pay Wall",
         fontSize = 50.sp,
         color = Color.White
     )

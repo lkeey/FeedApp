@@ -1,4 +1,4 @@
-package feature_login.models
+package features.feature_login.models
 
 data class LoginViewState (
     val emailValue: String = "",
