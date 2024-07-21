@@ -101,7 +101,7 @@ fun MainScreen(
                                 MainScreens.Library -> Icons.Filled.AccountBox
                             },
                             contentDescription = screen.route,
-                            tint = Theme.colors.tintColor
+                            tint = if (isSelected) Theme.colors.primaryText else Theme.colors.tintColor
                         )
                     },
                     label = {
