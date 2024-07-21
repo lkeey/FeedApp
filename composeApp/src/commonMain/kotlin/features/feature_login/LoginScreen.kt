@@ -8,13 +8,14 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import features.feature_login.models.LoginAction
+import navigation.AppScreens
 import navigation.LocalNavHost
 
 @Composable
 fun LoginScreen(
     viewModel: LoginViewModel = viewModel { LoginViewModel() }
 ) {
-    val navHost = LocalNavHost.current
+    val externalNavHost = LocalNavHost.current
     val viewState by viewModel.viewStates().collectAsState()
     val viewAction by viewModel.viewActions().collectAsState(null)
 
@@ -26,7 +27,7 @@ fun LoginScreen(
 
     when (viewAction) {
         LoginAction.OpenMainScreen -> {
-
+            externalNavHost.navigate(AppScreens.Main.title)
             viewModel.clearAction()
         }
         null -> { }
