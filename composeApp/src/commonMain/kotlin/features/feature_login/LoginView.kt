@@ -13,7 +13,6 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -21,6 +20,16 @@ import androidx.compose.ui.unit.sp
 import common.textfield.FTextField
 import features.feature_login.models.LoginEvent
 import features.feature_login.models.LoginViewState
+import feedapp.composeapp.generated.resources.Res
+import feedapp.composeapp.generated.resources.login_email
+import feedapp.composeapp.generated.resources.login_forgot
+import feedapp.composeapp.generated.resources.login_intro
+import feedapp.composeapp.generated.resources.login_login
+import feedapp.composeapp.generated.resources.login_password
+import feedapp.composeapp.generated.resources.login_register
+import feedapp.composeapp.generated.resources.login_signup
+import feedapp.composeapp.generated.resources.login_welcome_back
+import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import theme.AppTheme
 import theme.Theme
@@ -39,7 +48,7 @@ internal fun LoginView (
         ) {
             Text(
                 modifier = Modifier.align(Alignment.Center),
-                text = "Login",
+                text = stringResource(Res.string.login_login),
                 color = Theme.colors.primaryText,
                 fontWeight = FontWeight.Bold, fontSize = 18.sp
             )
@@ -52,7 +61,7 @@ internal fun LoginView (
         ) {
             Text(
                 modifier = Modifier.align(Alignment.Center),
-                text = "Welcome back",
+                text = stringResource(Res.string.login_welcome_back),
                 color = Theme.colors.primaryText,
                 fontWeight = FontWeight.Bold, fontSize = 22.sp
             )
@@ -65,7 +74,7 @@ internal fun LoginView (
         ) {
             Text(
                 modifier = Modifier.align(Alignment.Center),
-                text = "Log in to your account and start watching your favorite YouTubers.",
+                text = stringResource(Res.string.login_intro),
                 color = Theme.colors.primaryText,
                 textAlign = TextAlign.Center,
                 fontWeight = FontWeight.Normal, fontSize = 16.sp
@@ -74,7 +83,7 @@ internal fun LoginView (
 
         FTextField(
             text = viewState.emailValue,
-            hint = "Email",
+            hint = stringResource(Res.string.login_email),
             enabled = !viewState.isSending
         ) {
             eventHandler.invoke(LoginEvent.EmailChanged(it))
@@ -82,7 +91,7 @@ internal fun LoginView (
 
         FTextField(
             text = viewState.passwordValue,
-            hint = "Password",
+            hint = stringResource(Res.string.login_password),
             enabled = !viewState.isSending
         ) {
             eventHandler.invoke(LoginEvent.PasswordChanged(it))
@@ -100,7 +109,7 @@ internal fun LoginView (
             ) {
                 Text(
                     modifier = Modifier.align(Alignment.Center),
-                    text = "Forgot Password",
+                    text = stringResource(Res.string.login_forgot),
                     color = Theme.colors.primaryText
                 )
             }
@@ -115,7 +124,7 @@ internal fun LoginView (
             ) {
                 Text(
                     modifier = Modifier.align(Alignment.Center),
-                    text = "Log in",
+                    text = stringResource(Res.string.login_login),
                     color = Theme.colors.primaryText
                 )
             }
@@ -124,7 +133,7 @@ internal fun LoginView (
         Row {
             Text(
                 modifier = Modifier.padding(top = 4.dp, bottom = 12.dp, start = 16.dp),
-                text = "Don't have an account?",
+                text = stringResource(Res.string.login_register),
                 color = Theme.colors.tintColor,
                 fontWeight = FontWeight.Light
             )
@@ -134,7 +143,7 @@ internal fun LoginView (
                     .clickable {
                         eventHandler.invoke(LoginEvent.SignUpClicked)
                     },
-                text = "Sign up.",
+                text = stringResource(Res.string.login_signup),
                 color = Theme.colors.tintColor,
                 fontWeight = FontWeight.Light
             )

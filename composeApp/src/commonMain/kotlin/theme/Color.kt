@@ -5,13 +5,12 @@ import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
 
 val darkPalette = Colors(
-    primaryBackground = Color(0xFF222222),
-    primaryText = Color(0xFFFFFFFF),
-
-    secondaryText = Color(0xFFFFFFFF),
-    secondaryBackground = Color(0xFFFFFFFF),
-
-    tintColor = Color(0xFFFFFFFF),
+    primaryBackground = Color(0xFF141217),
+    primaryText = Color.White,
+    secondaryBackground = Color(0xFF302938),
+    secondaryText = Color.White,
+    tintColor = Color(0xFFAB9EB8),
+    dividerColor = Color(0xFF473D54)
 )
 
 val LocalColor = staticCompositionLocalOf<Colors> { error("no default implementation for colors") }
@@ -21,4 +20,3 @@ object Theme {
         @Composable
         get() = LocalColor.current
 }
-

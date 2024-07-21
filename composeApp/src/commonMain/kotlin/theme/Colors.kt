@@ -10,4 +10,5 @@ data class Colors (
     val secondaryBackground: Color,
 
     val tintColor: Color,
+    val dividerColor: Color
 )

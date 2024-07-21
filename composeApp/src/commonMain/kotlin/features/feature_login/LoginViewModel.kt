@@ -12,17 +12,26 @@ class LoginViewModel : BaseViewModel<LoginViewState, LoginAction, LoginEvent> (
         when (viewEvent) {
             is LoginEvent.EmailChanged -> {
                 viewState = viewState.copy(
-                    emailValue = viewState.emailValue
+                    emailValue = viewEvent.newEmail
                 )
             }
             is LoginEvent.PasswordChanged -> {
                 viewState = viewState.copy(
-                    passwordValue = viewState.passwordValue
+                    passwordValue = viewEvent.newPassword
                 )
             }
 
-            LoginEvent.LoginClicked -> TODO()
-            LoginEvent.SignUpClicked -> TODO()
+            LoginEvent.LoginClicked -> {
+                viewAction = LoginAction.OpenMainScreen
+            }
+
+            LoginEvent.SignUpClicked -> {
+                onSignUpClicked()
+            }
         }
+    }
+
+    private fun onSignUpClicked() {
+
     }
 }
