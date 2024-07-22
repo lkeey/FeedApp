@@ -9,6 +9,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import features.feature_profile.presentation.models.ProfileViewState
+import features.feature_profile.ui.ProfileView
 
 @Composable
 fun FeedView (
@@ -22,5 +24,12 @@ fun FeedView (
         text = "Home",
         color = Color.White,
         fontSize = 50.sp
+    )
+
+    ProfileView(
+        ProfileViewState(),
+        {
+
+        }
     )
 }

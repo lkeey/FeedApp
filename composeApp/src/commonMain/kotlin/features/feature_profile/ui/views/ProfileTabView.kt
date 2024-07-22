@@ -19,10 +19,20 @@ fun ProfileTabsView(
     selectedIndex: Int,
     onItemSelected: (Int) -> Unit
 ) {
-    Column(modifier = Modifier.fillMaxWidth().height(54.dp)) {
-        Row(modifier = Modifier.fillMaxHeight()) {
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(54.dp)
+    ) {
+        Row(
+            modifier = Modifier
+                .fillMaxHeight()
+        ) {
             items.forEach {
-                Spacer(modifier = Modifier.width(16.dp))
+                Spacer(
+                    modifier = Modifier
+                        .width(16.dp)
+                )
 
                 val index = items.indexOf(it)
 

@@ -17,7 +17,10 @@ import androidx.compose.ui.unit.sp
 import common.button.FSecondaryButton
 import features.feature_profile.presentation.models.ProfileEvent
 import features.feature_profile.presentation.models.ProfileViewState
+import features.feature_profile.ui.views.ProfileAboutView
+import features.feature_profile.ui.views.ProfilePlaylistsView
 import features.feature_profile.ui.views.ProfileTabsView
+import features.feature_profile.ui.views.ProfileVideosView
 import feedapp.composeapp.generated.resources.Res
 import feedapp.composeapp.generated.resources.profile_about
 import feedapp.composeapp.generated.resources.profile_playlists
@@ -107,4 +110,3 @@ fun ProfileView(
         }
     }
 }
-

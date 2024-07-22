@@ -1,4 +1,5 @@
 package features.feature_profile.presentation.models
 
-class ProfileEvent {
+sealed class ProfileEvent {
+    class TabSelected(val selectedIndex: Int) : ProfileEvent()
 }

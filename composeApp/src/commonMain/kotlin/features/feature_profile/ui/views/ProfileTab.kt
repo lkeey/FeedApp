@@ -20,17 +20,27 @@ internal fun ProfileTab(
     isSelected: Boolean,
     onClick: () -> Unit
 ) {
-    Box(modifier = Modifier.clickable { onClick.invoke() }.width(IntrinsicSize.Min).fillMaxHeight()) {
+    Box(
+        modifier = Modifier
+            .clickable {
+                onClick.invoke()
+            }
+            .width(IntrinsicSize.Min)
+            .fillMaxHeight()
+    ) {
         Text(
-            modifier = Modifier.width(IntrinsicSize.Max).align(Alignment.Center),
+            modifier = Modifier
+                .width(IntrinsicSize.Max)
+                .align(Alignment.Center),
             text = title,
             color = if (isSelected) Theme.colors.primaryText else Theme.colors.tintColor
         )
 
         Divider(
-            modifier = Modifier.height(3.dp).align(Alignment.BottomStart),
+            modifier = Modifier
+                .height(3.dp)
+                .align(Alignment.BottomStart),
             color = if (isSelected) Theme.colors.primaryText else Theme.colors.tintColor,
-
-            )
+        )
     }
 }
