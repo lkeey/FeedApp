@@ -7,6 +7,9 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsCompose)
     alias(libs.plugins.compose.compiler)
+    alias(libs.plugins.kotlinx.serialization)
+    alias(libs.plugins.room)
+    alias(libs.plugins.ksp)
 }
 
 kotlin {
@@ -46,6 +49,12 @@ kotlin {
             implementation(compose.ui)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
+
+            implementation(libs.room.runtime)
+            implementation(libs.room.sqlite)
+            implementation(libs.room.sqlite.bundled)
+
+            implementation(libs.ktor.core)
 
             implementation(libs.compose.viewmodel)
             implementation(libs.compose.navigation)
@@ -104,4 +113,17 @@ compose.desktop {
             packageVersion = "1.0.0"
         }
     }
+}
+
+dependencies {
+    add("kspAndroid", libs.room.compiler)
+    afterEvaluate {
+        add("kspIosSimulatorArm64", libs.room.compiler)
+        add("kspIosX64", libs.room.compiler)
+        add("kspIosArm64", libs.room.compiler)
+    }
+}
+
+room {
+    schemaDirectory("$projectDir/schemas")
 }
