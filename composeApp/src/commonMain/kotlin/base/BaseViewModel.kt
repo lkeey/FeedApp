@@ -1,6 +1,7 @@
 package base
 
 import androidx.lifecycle.ViewModel
+import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.channels.BufferOverflow
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -35,4 +36,7 @@ public abstract class BaseViewModel<State : Any, Action, Event>(
     public fun clearAction() {
         viewAction = null
     }
+
+//    public abstract fun onCleared()
+
 }

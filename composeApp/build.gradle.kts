@@ -39,6 +39,8 @@ kotlin {
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
+
+            implementation(libs.ktor.client.okhttp)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -54,7 +56,11 @@ kotlin {
             implementation(libs.room.sqlite)
             implementation(libs.room.sqlite.bundled)
 
-            implementation(libs.ktor.core)
+            implementation(libs.ktor.client.core)
+            implementation(libs.ktor.client.logging)
+            implementation(libs.ktor.serialization.kotlinx.json)
+            implementation(libs.ktor.client.content.negotiation)
+            implementation(libs.ktor.client.encoding)
 
             implementation(libs.compose.viewmodel)
             implementation(libs.compose.navigation)
@@ -64,6 +70,9 @@ kotlin {
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
+        }
+        iosMain.dependencies {
+            implementation(libs.ktor.client.darwin)
         }
     }
 }
@@ -124,6 +133,7 @@ dependencies {
         add("kspIosX64", libs.room.compiler)
         add("kspIosArm64", libs.room.compiler)
     }
+    implementation(kotlin("script-runtime"))
 }
 
 room {
