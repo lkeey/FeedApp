@@ -29,7 +29,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import features.feature_feed.FeedScreen
+import features.feature_feed.presentation.FeedScreen
 import feedapp.composeapp.generated.resources.Res
 import feedapp.composeapp.generated.resources.bottom_home
 import feedapp.composeapp.generated.resources.bottom_inbox

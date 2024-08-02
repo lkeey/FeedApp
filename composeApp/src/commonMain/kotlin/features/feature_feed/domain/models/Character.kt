@@ -1,4 +1,4 @@
-package features.feature_feed.models
+package features.feature_feed.domain.models
 
 import kotlinx.serialization.Serializable
 
